@@ -18,7 +18,7 @@
     padding-left: 3%;
     display: flex;
     align-items: center;
-    height: 45px;
+    height: 6.2vh;
     z-index: 9999;
     margin-top: 5%;
 }
@@ -61,4 +61,10 @@
 
 #searched-content-container-inside>a {
     color: white;
+}
+
+@media (max-height: 550px) {
+    #search-form {
+        height: 45px;
+    }
 }
