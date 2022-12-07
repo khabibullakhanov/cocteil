@@ -1,0 +1,22 @@
+#search-form {
+    background-color: white;
+    width: 92%;
+    border-radius: 6px;
+    gap: 0.3rem;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    z-index: 9999;
+    margin-top: 5%;
+}
+
+#search-form > input::placeholder {
+    color: rgba(192, 192, 192, 0.774);
+}
+#search-form > input {
+    color: rgb(207, 207, 207);
+    background: none;
+    outline: none;
+    border: none;
+}

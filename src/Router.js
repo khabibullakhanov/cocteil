@@ -1,21 +1,24 @@
 import React from "react";
-import { Routes } from "react-router-dom";
-// import { Home } from "./Pages/Home/Home";
+import { Routes, Route } from "react-router-dom";
 import "./Assets/Css/Global.css";
-// import { Portfolios } from "./Pages/Portfolios/Portfolios";
-// import { Feedback } from "./Pages/Feedback/Feedback";
 import { NavigationBottom } from "./Companents/Navbar/NavigationBottom";
 import Paper from '@mui/material/Paper';
-// import { NavigationTop } from "./Companents/Navbar/NavigationTop";
-// import { AddPortfolio } from "./Pages/CrudPortfolio/AddPortfolio";
-// import { EditPortfolio } from "./Pages/CrudPortfolio/EditPortfolio";
+import { NavigationTop } from "./Companents/Navbar/NavigationTop";
+import { MainScreen } from "./Pages/MainScreen/MainScreen";
+import { useLocation } from "react-router-dom";
+
 
 export function Router() {
+
+    const location = useLocation();
+
     return (
         <div id="router">
-            {/* <NavigationTop /> */}
+            <div style={location.pathname === "/" ? { display: "none" } : { display: "block" }}>
+            <NavigationTop /> 
+            </div>
             <Routes>
-                {/* <Route path="/" element={<Home />} /> */}
+                <Route path="/" element={<MainScreen />} />
                 {/* <Route path="/portfolios" element={<Portfolios />} />
                 <Route path="/feedback" element={<Feedback />} />
                 <Route path="/add_portfolio" element={<AddPortfolio />} />

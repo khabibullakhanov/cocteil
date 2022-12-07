@@ -1,0 +1,8 @@
+#navigation-bottom-icons>:nth-child(1){
+    width: 100% !important;
+}
+
+#navigation-bottom-icons {
+    /* width: 90% !important; */
+    margin: 0 1px !important;
+}

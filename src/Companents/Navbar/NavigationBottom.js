@@ -1,11 +1,12 @@
 import React from "react";
 import { Box, BottomNavigation, BottomNavigationAction, } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
-import AddBoxIcon from '@mui/icons-material/AddBox';
-import RateReviewIcon from '@mui/icons-material/RateReview';
 import { useNavigate } from "react-router-dom";
 import "./NavigationBottom.css"
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import PersonIcon from '@mui/icons-material/Person';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export function NavigationBottom() {
     const [value, setValue] = React.useState(0);
@@ -18,7 +19,7 @@ export function NavigationBottom() {
                 sx={{
                     width: "100%",
                     height: "auto",
-                    backgroundColor: "#ccc",
+                    backgroundColor: "#514A7E",
                     zIndex: "99999",
                 }}
             >
@@ -31,7 +32,10 @@ export function NavigationBottom() {
                     sx={{
                         width: "100%",
                         display: "flex",
-                        justifyContent: "space-between",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        backgroundColor: "#514A7E",
+                        color: "white",
                     }}
                 >
                     {/* <BottomNavigationAction
@@ -44,17 +48,15 @@ export function NavigationBottom() {
                     /> */}
                     <BottomNavigationAction
                         id="navigation-bottom-icons"
-                        label="Home"
-                        icon={<HomeIcon style={{ color: "grey" }} />}
+                        icon={<HomeIcon style={{ color: "white", fontSize: "26px", marginRight:"-90px" }} />}
                         onClick={() => {
                             navigate("/");
                         }}
                     />
                     <BottomNavigationAction
                         id="navigation-bottom-icons"
-                        label="Portfolios"
                         icon={
-                            <DashboardIcon style={{ color: "grey" }} />
+                            <FavoriteBorderIcon style={{ color: "white", fontSize: "26px", marginLeft:"45px" }} />
                         }
                         onClick={() => {
                             navigate("/portfolios");
@@ -63,9 +65,8 @@ export function NavigationBottom() {
 
                     <BottomNavigationAction
                         id="navigation-bottom-icons"
-                        label="Feedback"
                         icon={
-                            <RateReviewIcon style={{ color: "grey" }} />
+                            <PersonIcon style={{ color: "white", fontSize: "26px", marginLeft:"2px" }} />
                         }
                         onClick={() => {
                             navigate("/feedback");
@@ -73,9 +74,18 @@ export function NavigationBottom() {
                     />
                     <BottomNavigationAction
                         id="navigation-bottom-icons"
-                        label="Add"
                         icon={
-                            <AddBoxIcon style={{ color: "grey" }} />
+                            <ShoppingBagIcon style={{ color: "white", fontSize: "26px", marginLeft:"-40px" }} />
+                        }
+                        onClick={() => {
+                            navigate("/add_portfolio");
+                        }}
+                    />
+
+                    <BottomNavigationAction
+                        id="navigation-bottom-icons"
+                        icon={
+                            <MenuIcon style={{ color: "white", fontSize: "26px", marginRight:"90px" }} />
                         }
                         onClick={() => {
                             navigate("/add_portfolio");
