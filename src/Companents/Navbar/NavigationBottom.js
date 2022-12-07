@@ -1,28 +1,31 @@
 import React from "react";
-import { Box, BottomNavigation, BottomNavigationAction, } from "@mui/material";
-import HomeIcon from "@mui/icons-material/Home";
+import { BottomNavigation, BottomNavigationAction, } from "@mui/material";
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import { useNavigate } from "react-router-dom";
 import "./NavigationBottom.css"
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import PersonIcon from '@mui/icons-material/Person';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
+// import { Drawer } from "@mui/material";
+// import CloseIcon from '@mui/icons-material/Close';
 
 export function NavigationBottom() {
     const [value, setValue] = React.useState(0);
     const navigate = useNavigate();
+    // const [open, setOpen] = useState(false)
 
 
     return (
         <div>
-            <Box
+            {/* <Box
                 sx={{
                     width: "100%",
                     height: "auto",
                     backgroundColor: "#514A7E",
                     zIndex: "99999",
                 }}
-            >
+            > */}
                 <BottomNavigation
                     showLabels
                     value={value}
@@ -48,7 +51,7 @@ export function NavigationBottom() {
                     /> */}
                     <BottomNavigationAction
                         id="navigation-bottom-icons"
-                        icon={<HomeIcon style={{ color: "white", fontSize: "26px", marginRight:"-90px" }} />}
+                        icon={<HomeOutlinedIcon style={{ color: "white" }} />}
                         onClick={() => {
                             navigate("/");
                         }}
@@ -56,7 +59,7 @@ export function NavigationBottom() {
                     <BottomNavigationAction
                         id="navigation-bottom-icons"
                         icon={
-                            <FavoriteBorderIcon style={{ color: "white", fontSize: "26px", marginLeft:"45px" }} />
+                            <FavoriteBorderIcon  style={{ color: "white" }}/>
                         }
                         onClick={() => {
                             navigate("/portfolios");
@@ -66,7 +69,7 @@ export function NavigationBottom() {
                     <BottomNavigationAction
                         id="navigation-bottom-icons"
                         icon={
-                            <PersonIcon style={{ color: "white", fontSize: "26px", marginLeft:"2px" }} />
+                            <PersonOutlineOutlinedIcon style={{ color: "white" }}/>
                         }
                         onClick={() => {
                             navigate("/feedback");
@@ -75,7 +78,7 @@ export function NavigationBottom() {
                     <BottomNavigationAction
                         id="navigation-bottom-icons"
                         icon={
-                            <ShoppingBagIcon style={{ color: "white", fontSize: "26px", marginLeft:"-40px" }} />
+                            <ShoppingBagOutlinedIcon style={{ color: "white" }}/>
                         }
                         onClick={() => {
                             navigate("/add_portfolio");
@@ -83,16 +86,37 @@ export function NavigationBottom() {
                     />
 
                     <BottomNavigationAction
+                        onClick={() => {
+                            // setOpen(true)
+                            navigate("/menu");
+                        }}
                         id="navigation-bottom-icons"
                         icon={
-                            <MenuIcon style={{ color: "white", fontSize: "26px", marginRight:"90px" }} />
+                            <MenuIcon style={{ color: "white" }}/>
                         }
-                        onClick={() => {
-                            navigate("/add_portfolio");
-                        }}
                     />
                 </BottomNavigation>
-            </Box>
+            {/* </Box> */}
+            {/* <Drawer
+                anchor="right"
+                id="drawer"
+                open={open}
+                onClose={() => {
+                    setOpen(!open);
+                }}
+            >
+                <div id="close-appabr-navbar-div">
+                    <CloseIcon
+                        onClick={() => {
+                            setOpen(false)
+                        }}
+                        id="close-appbar-navbar"
+                    />
+                </div>
+                <div className="drawer">
+
+                </div>
+            </Drawer> */}
         </div>
     )
 }

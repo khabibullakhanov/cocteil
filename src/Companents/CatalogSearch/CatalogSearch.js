@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import searchIcon from "../../Assets/Icons/Search Icon.svg"
-import "./SearchBar.css"
+import "./CatalogSearch.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { acSearch } from '../../Redux/Search'
 import { Link } from 'react-router-dom'
 
 
-export function SearchBar() {
+export function CatalogSearch() {
     const [search, setSearch] = useState()
     const dispatch = useDispatch()
     const searched = useSelector((state) => state.search);
@@ -243,7 +243,8 @@ export function SearchBar() {
         }
     ]
     return (
-        <div id='search-bar-container'>
+        <div id='search-bar-catalog-container'>
+            <p>Каталог</p>
             <form id='search-form'
                 onSubmit={(e) => {
                     e.preventDefault()
@@ -257,7 +258,7 @@ export function SearchBar() {
                     }}
                 />
             </form>
-            <div id='searched-content-container' style={search ? { display: "flex", } : { display: "none" }}>
+            <div id='searched-catalog-content-container' style={search ? { display: "flex", } : { display: "none" }}>
                 {search ? products.filter((itemn) => itemn.name.includes(searched))
                     .map((item, index) => {
                         return (

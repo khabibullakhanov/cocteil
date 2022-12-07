@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Italianno&family=Sacramento&display=swap');
 
 #main-screen-main-container {
     width: 100%;
     height: 100%;
-    background-image: url("../../Assets/Images/Main\ Screeen\ Background.png");
+    background-image: url("../../Assets/Images/Main\ Screeen\ Background.png") ;
     display: flex;
     /* justify-content: space-between; */
     flex-direction: column;
@@ -11,6 +11,8 @@
     max-height: 100vh;
     position: absolute;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #main-screen-inside-content {
@@ -33,7 +35,7 @@
 #main-screen-inside-content>h2>span {
     font-size: 30px;
     font-weight: 200 !important;
-    font-family: 'Sacramento';
+    font-family: 'Bad Script';
 
 }
 
