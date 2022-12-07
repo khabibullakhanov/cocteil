@@ -1,8 +1,40 @@
-#navigation-bottom-icons>:nth-child(1){
+#navigation-bottom-icons>:nth-child(1) {
     width: 100% !important;
 }
 
 #navigation-bottom-icons {
     /* width: 90% !important; */
     margin: 0 1px !important;
+}
+
+#navigation-bottom-top-part-category {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 32px;
+    border-radius: 50px 50px 0 0 !important;
+}
+
+#navigation-bottom-top-part-category>:last-child {
+    border-top-right-radius: 3px;
+}
+
+#navigation-bottom-top-part-category>:nth-child(1) {
+    border-top-left-radius: 3px;
+}
+
+#navigation-bottom-top-part-category>a {
+    color: black;
+    font-size: 12px;
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+}
+
+#navigation-bottom-top-part-category>a.active {
+    box-shadow: 0px 4px 10px rgba(81, 74, 126, 0.2);
 }

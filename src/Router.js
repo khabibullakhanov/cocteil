@@ -6,7 +6,7 @@ import Paper from '@mui/material/Paper';
 import { NavigationTop } from "./Companents/Navbar/NavigationTop";
 import { MainScreen } from "./Pages/MainScreen/MainScreen";
 import { useLocation } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 
 export function Router() {
 
@@ -15,7 +15,7 @@ export function Router() {
     return (
         <div id="router">
             <div style={location.pathname === "/" ? { display: "none" } : { display: "block" }}>
-            <NavigationTop /> 
+                <NavigationTop />
             </div>
             <Routes>
                 <Route path="/" element={<MainScreen />} />
@@ -25,6 +25,11 @@ export function Router() {
                 <Route path="/portfolios/view_portfolio" element={<EditPortfolio/>} /> */}
             </Routes>
             <Paper sx={MyStyle.Paper} elevation={3}>
+                <div id="navigation-bottom-top-part-category">
+                    <NavLink>Женщинам</NavLink>
+                    <NavLink>Мужчинам</NavLink>
+                    <NavLink>Детям</NavLink>
+                </div>
                 <NavigationBottom />
             </Paper>
         </div>
