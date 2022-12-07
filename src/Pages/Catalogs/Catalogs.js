@@ -8,10 +8,85 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import StarOutlineOutlinedIcon from '@mui/icons-material/StarOutlineOutlined';
 import StarOutlinedIcon from '@mui/icons-material/StarOutlined';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import { toast } from "react-toastify";
+
+
 
 export function Catalogs() {
 
     const data = [
+        {
+            id: 1,
+            name: "Блузка женская классная",
+            cost: "50.00 р",
+            img: modelImg,
+        },
+        {
+            id: 1,
+            name: "Блузка женская классная",
+            cost: "50.00 р",
+            img: modelImg,
+        },
+        {
+            id: 1,
+            name: "Блузка женская классная",
+            cost: "50.00 р",
+            img: modelImg,
+        },
+        {
+            id: 1,
+            name: "Блузка женская классная",
+            cost: "50.00 р",
+            img: modelImg,
+        },
+        {
+            id: 1,
+            name: "Блузка женская классная",
+            cost: "50.00 р",
+            img: modelImg,
+        },
+        {
+            id: 1,
+            name: "Блузка женская классная",
+            cost: "50.00 р",
+            img: modelImg,
+        },
+        {
+            id: 1,
+            name: "Блузка женская классная",
+            cost: "50.00 р",
+            img: modelImg,
+        },
+        {
+            id: 1,
+            name: "Блузка женская классная",
+            cost: "50.00 р",
+            img: modelImg,
+        },
+        {
+            id: 1,
+            name: "Блузка женская классная",
+            cost: "50.00 р",
+            img: modelImg,
+        },
+        {
+            id: 1,
+            name: "Блузка женская классная",
+            cost: "50.00 р",
+            img: modelImg,
+        },
+        {
+            id: 1,
+            name: "Блузка женская классная",
+            cost: "50.00 р",
+            img: modelImg,
+        },
+        {
+            id: 1,
+            name: "Блузка женская классная",
+            cost: "50.00 р",
+            img: modelImg,
+        },
         {
             id: 1,
             name: "Блузка женская классная",
@@ -93,7 +168,11 @@ export function Catalogs() {
                     <div id='catalog-main-container'>
                         <figure id='catalog-figure-content'>
                             <img src={item.img} alt="" />
-                            <IconButton>
+                            <IconButton
+                                onClick={() => {
+                                    toast.warn("Product is added to the likes !")
+                                }}
+                            >
                                 <Checkbox
                                     icon={<FavoriteBorderIcon style={{ color: "black" }} />}
                                     checkedIcon={<FavoriteIcon style={{ color: "black" }} />}
@@ -124,7 +203,11 @@ export function Catalogs() {
                                         />
                                     </div>
                                     <div id='catalog-basket-icon-content'>
-                                        <IconButton >
+                                        <IconButton
+                                            onClick={() => {
+                                                toast.success("Product is added to the cart !")
+                                            }}
+                                        >
                                             <ShoppingBagOutlinedIcon id='catalog-basket-icon' style={{ color: "black" }} />
                                         </IconButton>
                                     </div>
