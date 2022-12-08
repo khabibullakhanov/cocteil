@@ -81,11 +81,12 @@ export function NavigationBottom() {
                         <ShoppingBagOutlinedIcon style={{ color: "white" }} />
                     }
                     onClick={() => {
-                        navigate("/add_portfolio");
+                        navigate("/basket");
                     }}
                 />
 
                 <BottomNavigationAction
+                    style={{ width: "100px" }}
                     onClick={() => {
                         // setOpen(true)
                         navigate("/menu");

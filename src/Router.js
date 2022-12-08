@@ -12,6 +12,7 @@ import { Menu } from "./Pages/Menu/Menu";
 import { Catalogs } from "./Pages/Catalogs/Catalogs";
 import { Registration } from "./Pages/Registration/Registration";
 import { Feedback } from "./Pages/Feedback/Feedback";
+import { Basket } from "./Pages/Basket/Basket";
 
 export function Router() {
 
@@ -30,7 +31,8 @@ export function Router() {
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/catalog" element={<Catalogs />} />
-                <Route path="/feedbacks" element={<Feedback/>} />
+                <Route path="/feedbacks" element={<Feedback />} />
+                <Route path="/basket" element={<Basket />} />
                 {/* <Route path="/portfolios" element={<Portfolios />} />
                 <Route path="/add_portfolio" element={<AddPortfolio />} />
                 <Route path="/portfolios/view_portfolio" element={<EditPortfolio/>} /> */}
