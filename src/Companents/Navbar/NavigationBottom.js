@@ -26,22 +26,22 @@ export function NavigationBottom() {
                     zIndex: "99999",
                 }}
             > */}
-                <BottomNavigation
-                    showLabels
-                    value={value}
-                    onChange={(event, newValue) => {
-                        setValue(newValue);
-                    }}
-                    sx={{
-                        width: "100%",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        backgroundColor: "#514A7E",
-                        color: "white",
-                    }}
-                >
-                    {/* <BottomNavigationAction
+            <BottomNavigation
+                showLabels
+                value={value}
+                onChange={(event, newValue) => {
+                    setValue(newValue);
+                }}
+                sx={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "#514A7E",
+                    color: "white",
+                }}
+            >
+                {/* <BottomNavigationAction
                         label="Menu"
                         icon={<LunchDiningIcon />}
                         onClick={() => {
@@ -49,53 +49,53 @@ export function NavigationBottom() {
                             navigate("/");
                         }}
                     /> */}
-                    <BottomNavigationAction
-                        id="navigation-bottom-icons"
-                        icon={<HomeOutlinedIcon style={{ color: "white" }} />}
-                        onClick={() => {
-                            navigate("/");
-                        }}
-                    />
-                    <BottomNavigationAction
-                        id="navigation-bottom-icons"
-                        icon={
-                            <FavoriteBorderIcon  style={{ color: "white" }}/>
-                        }
-                        onClick={() => {
-                            navigate("/portfolios");
-                        }}
-                    />
+                <BottomNavigationAction
+                    id="navigation-bottom-icons"
+                    icon={<HomeOutlinedIcon style={{ color: "white" }} />}
+                    onClick={() => {
+                        navigate("/");
+                    }}
+                />
+                <BottomNavigationAction
+                    id="navigation-bottom-icons"
+                    icon={
+                        <FavoriteBorderIcon style={{ color: "white" }} />
+                    }
+                    onClick={() => {
+                        navigate("/portfolios");
+                    }}
+                />
 
-                    <BottomNavigationAction
-                        id="navigation-bottom-icons"
-                        icon={
-                            <PersonOutlineOutlinedIcon style={{ color: "white" }}/>
-                        }
-                        onClick={() => {
-                            navigate("/feedback");
-                        }}
-                    />
-                    <BottomNavigationAction
-                        id="navigation-bottom-icons"
-                        icon={
-                            <ShoppingBagOutlinedIcon style={{ color: "white" }}/>
-                        }
-                        onClick={() => {
-                            navigate("/add_portfolio");
-                        }}
-                    />
+                <BottomNavigationAction
+                    id="navigation-bottom-icons"
+                    icon={
+                        <PersonOutlineOutlinedIcon style={{ color: "white" }} />
+                    }
+                    onClick={() => {
+                        navigate("/registration");
+                    }}
+                />
+                <BottomNavigationAction
+                    id="navigation-bottom-icons"
+                    icon={
+                        <ShoppingBagOutlinedIcon style={{ color: "white" }} />
+                    }
+                    onClick={() => {
+                        navigate("/add_portfolio");
+                    }}
+                />
 
-                    <BottomNavigationAction
-                        onClick={() => {
-                            // setOpen(true)
-                            navigate("/menu");
-                        }}
-                        id="navigation-bottom-icons"
-                        icon={
-                            <MenuIcon style={{ color: "white" }}/>
-                        }
-                    />
-                </BottomNavigation>
+                <BottomNavigationAction
+                    onClick={() => {
+                        // setOpen(true)
+                        navigate("/menu");
+                    }}
+                    id="navigation-bottom-icons"
+                    icon={
+                        <MenuIcon style={{ color: "white" }} />
+                    }
+                />
+            </BottomNavigation>
             {/* </Box> */}
             {/* <Drawer
                 anchor="right"
