@@ -77,7 +77,7 @@ export function BasketProducts() {
         <div id='product-catalogs-main-container'>
             {data.map((item, index) => {
                 return (
-                    <div id='product-catalog-main-container'>
+                    <div key={index} id='product-catalog-main-container'>
                         <div id='product-catalog-main-container-top'>
                             <div id='product-catalog-main-container-top-left'>
                                 <figure>
@@ -95,22 +95,22 @@ export function BasketProducts() {
                                 </div>
                                 <div id='product-catalog-main-container-top-right-third-content'>
                                     <IconButton>
-                                        -
+                                        <p>-</p>
                                     </IconButton>
                                     <h3>{item.count}</h3>
                                     <IconButton>
-                                        +
+                                        <p>+</p>
                                     </IconButton>
                                 </div>
                                 <div id='product-catalog-main-container-top-right-fourth-content'>
-                                    <div>
+                                    <div id='product-catalog-main-container-top-right-fourth-content-top'>
                                         <h6>Стоимость</h6>
                                         <h4>{item.cost}</h4>
                                     </div>
                                     <div id='product-catalog-main-container-top-right-fourth-content-bottom'>
                                         <Checkbox
-                                            icon={<FavoriteBorderIcon style={{ color: "black", fontSize: "15px" }} />}
-                                            checkedIcon={<FavoriteIcon style={{ color: "black", fontSize: "15px" }} />}
+                                            icon={<FavoriteBorderIcon id="like-basket-content" style={{ color: "black", fontSize: "15px" }} />}
+                                            checkedIcon={<FavoriteIcon id="like-basket-content" style={{ color: "black", fontSize: "15px" }} />}
                                         />
                                         <p>В избранное</p>
                                     </div>
@@ -125,7 +125,7 @@ export function BasketProducts() {
                             <div id='product-catalog-main-container-bottom-right'>
                                 <p>Информация о доставке</p>
                                 <IconButton>
-                                    <ArrowRightAltIcon />
+                                    <ArrowRightAltIcon id="catalog-right-icon"/>
                                 </IconButton>
                             </div>
                         </div>
