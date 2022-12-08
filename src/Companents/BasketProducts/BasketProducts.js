@@ -7,6 +7,13 @@ import "./BasketProducts.css"
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Checkbox } from "@mui/material";
+import { toast } from "react-toastify"
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-creative";
+import { EffectCreative } from "swiper";
+
+
 
 
 export function BasketProducts() {
@@ -73,6 +80,21 @@ export function BasketProducts() {
         },
 
     ]
+
+    const plus = (id) => {
+        // setCart(() =>
+        data.map((item) =>
+            // item.id === id
+            //     ? {
+            //         ...item,
+            //         count: item.count + 1,
+            //     }
+            //     : item
+            alert(item.count++)
+        )
+        // );
+    };
+
     return (
         <div id='product-catalogs-main-container'>
             {data.map((item, index) => {
@@ -80,9 +102,15 @@ export function BasketProducts() {
                     <div key={index} id='product-catalog-main-container'>
                         <div id='product-catalog-main-container-top'>
                             <div id='product-catalog-main-container-top-left'>
-                                <figure>
+                                {/* <figure>
                                     <img src={item.img} alt="" />
-                                </figure>
+                                </figure> */}
+                                <Swiper grabCursor={true} effect={"creative"} creativeEffect={{ prev: { shadow: true, translate: [0, 0, -400], }, next: { translate: ["100%", 0, 0], }, }} modules={[EffectCreative]} className="mySwiper">
+                                    <SwiperSlide id="swiper-img-content"><img src={item.img} alt="" /></SwiperSlide>
+                                    <SwiperSlide id="swiper-img-content"><img src={item.img} alt="" /></SwiperSlide>
+                                    <SwiperSlide id="swiper-img-content"><img src={item.img} alt="" /></SwiperSlide>
+                                </Swiper>
+
                             </div>
                             <div id='product-catalog-main-container-top-right'>
                                 <div id='product-catalog-main-container-top-right-first-content'>
@@ -98,7 +126,9 @@ export function BasketProducts() {
                                         <p>-</p>
                                     </IconButton>
                                     <h3>{item.count}</h3>
-                                    <IconButton>
+                                    <IconButton
+                                        onClick={() => plus(item.id)}
+                                    >
                                         <p>+</p>
                                     </IconButton>
                                 </div>
@@ -119,13 +149,15 @@ export function BasketProducts() {
                         </div>
                         <div id='product-catalog-main-container-bottom'>
                             <div id='product-catalog-main-container-bottom-left'>
-                                <img src={trashIcon} alt="" />
+                                <img onClick={() => {
+                                    toast.success("Product seccessfully deleted !");
+                                }} src={trashIcon} alt="" />
                                 <p>Удалить</p>
                             </div>
                             <div id='product-catalog-main-container-bottom-right'>
                                 <p>Информация о доставке</p>
                                 <IconButton>
-                                    <ArrowRightAltIcon id="catalog-right-icon"/>
+                                    <ArrowRightAltIcon id="catalog-right-icon" />
                                 </IconButton>
                             </div>
                         </div>

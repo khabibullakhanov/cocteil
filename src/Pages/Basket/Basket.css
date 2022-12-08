@@ -1,0 +1,32 @@
+#basket-main-container {
+    position: absolute;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#catalog-scroll-to-top {
+    background-color: #514A7E;
+    font-size: 1px;
+    border-radius: 50%;
+    color: white !important;
+    width: 60px;
+    height: 60px;
+    padding: 5px 10px !important;
+}
+
+#scroll-to-top-basket {
+    background-color: #514A7E;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 50px;
+    /* border-radius: 50%; */
+    position: relative;
+    bottom: 0;
+}
+
+#scroll-to-top-basket>img {
+    width: 35%;
+}
