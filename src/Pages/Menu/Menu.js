@@ -2,7 +2,7 @@ import React from 'react'
 import './Menu.css'
 import menuLogo from "../../Assets/Images/Menu Logo.png"
 import { Link } from 'react-router-dom'
-
+import { CatalogSearch } from "../../Companents/CatalogSearch/CatalogSearch"
 
 export function Menu() {
 
@@ -90,19 +90,22 @@ export function Menu() {
     ]
 
     return (
-        <div id='menu-main-container'>
-            <figure>
-                <img src={menuLogo} alt="" />
-            </figure>
-            <div id='menu-item-content'>
-                {menuNames.map((item, index) => {
-                    return (
-                        <Link to={item.path}>
-                            {item.name}
-                        </Link>
-                    )
-                })}
+        <>
+            <CatalogSearch />
+            <div id='menu-main-container'>
+                <figure>
+                    <img src={menuLogo} alt="" />
+                </figure>
+                <div id='menu-item-content'>
+                    {menuNames.map((item, index) => {
+                        return (
+                            <Link to={item.path}>
+                                {item.name}
+                            </Link>
+                        )
+                    })}
+                </div>
             </div>
-        </div>
+        </>
     )
 }

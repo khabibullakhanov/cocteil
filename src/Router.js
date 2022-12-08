@@ -10,6 +10,7 @@ import { NavLink } from "react-router-dom";
 import { Menu } from "./Pages/Menu/Menu";
 // import { CatalogSearch } from "./Companents/CatalogSearch/CatalogSearch";
 import { Catalogs } from "./Pages/Catalogs/Catalogs";
+import { Registration } from "./Pages/Registration/Registration";
 
 export function Router() {
 
@@ -26,6 +27,7 @@ export function Router() {
             <Routes>
                 <Route path="/" element={<MainScreen />} />
                 <Route path="/menu" element={<Menu />} />
+                <Route path="/registration" element={<Registration />} />
                 <Route path="/catalog" element={<Catalogs />} />
                 {/* <Route path="/portfolios" element={<Portfolios />} />
                 <Route path="/add_portfolio" element={<AddPortfolio />} />
