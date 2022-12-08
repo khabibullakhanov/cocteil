@@ -8,6 +8,7 @@
     width: 100%;
     /* margin: 0 auto; */
     height: 80vh;
+    position: fixed ;
 }
 
 #regis-form-container {
