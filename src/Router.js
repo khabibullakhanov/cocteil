@@ -11,6 +11,7 @@ import { Menu } from "./Pages/Menu/Menu";
 // import { CatalogSearch } from "./Companents/CatalogSearch/CatalogSearch";
 import { Catalogs } from "./Pages/Catalogs/Catalogs";
 import { Registration } from "./Pages/Registration/Registration";
+import { Feedback } from "./Pages/Feedback/Feedback";
 
 export function Router() {
 
@@ -29,6 +30,7 @@ export function Router() {
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/catalog" element={<Catalogs />} />
+                <Route path="/feedbacks" element={<Feedback/>} />
                 {/* <Route path="/portfolios" element={<Portfolios />} />
                 <Route path="/add_portfolio" element={<AddPortfolio />} />
                 <Route path="/portfolios/view_portfolio" element={<EditPortfolio/>} /> */}

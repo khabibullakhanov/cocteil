@@ -34,6 +34,9 @@ export function NavigationTop() {
                                 <MenuItem id="menu-languages" onClick={popupState.close}><img id='country-flags-uzb' src={uzb} alt="" /> Uzb</MenuItem>
                                 <MenuItem id="menu-languages" onClick={popupState.close}><img id='country-flags' src={eng} alt="" /> Eng</MenuItem>
                                 <MenuItem id="menu-languages" onClick={popupState.close}><img id='country-flags-rus' src={rus} alt="" /> Rus</MenuItem>
+                                <MenuItem id="menu-languages" onClick={popupState.close}><p onClick={() => {
+                                    navigate("/feedbacks");
+                                }}>Reviews</p></MenuItem>
                             </Menu>
                         </React.Fragment>
                     )}
